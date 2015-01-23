@@ -2,12 +2,16 @@
 Example usage of UNO, graphic objects and networking in LO extension
 """
 
+import errno
 import logging
+import socket
+import struct
 import uno
 import unohelper
 import uuid
 from com.sun.star.beans import PropertyValue
 from com.sun.star.task import XJobExecutor
+from PIL import Image
 
 # Network functions
 
