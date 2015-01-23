@@ -7,9 +7,34 @@ itself. To do so, unpack the oxt-extension with any program able to read the
 zip format. Running the script './build' in the unpacked source tree, will
 then recreate the extension (and possible modifications).
 
+## Running
+How to run extension and how to change its behavior.
+
+### Current state
+Extension adds a new button to LibreOffice toolbar, which looks like this:
+![Toolbar Icon](https://raw.githubusercontent.com/JIghtuse/uno-image-manipulation-example/master/images/imageexample_26.bmp)
+For now, when user press this button, extension will export all images from
+current document to /tmp folder. See file Addons.xcu for "URL" property (it
+sets argument to ImageExample service).
+
+### Changing behavior
+Extension can send all images from current document to remote server, get
+them back, and replace them in document. If remote server does some
+processing of pixels (for example, makes them grayscale), it is possible to
+apply some effect to all images in document at once.
+
+To enable this behavior user needs to change argument passed to
+ImageExample service (Addons.xcu: change "export_images" in "URL" property
+to "grayscale_images") and set remote server address and port (uno_image.py:
+look for "TODO", set IP address of a server and its port). After that, it is
+needed to build extension (run ./build) and install it to LibreOffice again.
+
 ## Limitations
 * Extension assumes it is run on UNIX system with /tmp path. It is easy to fix
 this limitation by changing code in generate_tmp_path().
+* There is no any config to set server address and port to send images.
+* Extension is dumb. It sends to server raw pixel values instead of original
+image, assuming that server will not change image size or format.
 
 ## Files
 
