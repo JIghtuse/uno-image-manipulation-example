@@ -22,7 +22,7 @@
                     <node oor:name="ToolBarItems">
                         <node oor:name="button1" oor:op="replace">
                             <prop oor:name="URL" oor:type="xs:string">
-                                <value>service:org.libreoffice.imageexample.ImageExample?show_warning</value>
+                                <value>service:org.libreoffice.imageexample.ImageExample?export_images</value>
                             </prop>
                             <prop oor:name="ImageIdentifier" oor:type="xs:string">
                                 <value>%origin%/images/imageexample</value>
@@ -31,8 +31,8 @@
                                 <value>_self</value>
                             </prop>
                             <prop oor:name="Title" oor:type="xs:string">
-                                <value xml:lang="en-US">Show warning</value>
-                                <value>Show warning</value>
+                                <value xml:lang="en-US">Export images</value>
+                                <value>Export images</value>
                             </prop>
                         </node>
                     </node>
