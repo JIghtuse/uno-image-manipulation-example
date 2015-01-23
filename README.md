@@ -24,14 +24,14 @@ processing of pixels (for example, makes them grayscale), it is possible to
 apply some effect to all images in document at once.
 
 To enable this behavior user needs to change argument passed to
-ImageExample service (Addons.xcu: change "export_images" in "URL" property
-to "grayscale_images") and set remote server address and port (uno_image.py:
+ImageExample service (Addons.xcu: change "export\_images" in "URL" property
+to "grayscale\_images") and set remote server address and port (uno\_image.py:
 look for "TODO", set IP address of a server and its port). After that, it is
 needed to build extension (run ./build) and install it to LibreOffice again.
 
 ## Limitations
 * Extension assumes it is run on UNIX system with /tmp path. It is easy to fix
-this limitation by changing code in generate_tmp_path().
+this limitation by changing code in generate\_tmp\_path().
 * There is no any config to set server address and port to send images.
 * Extension is dumb. It sends to server raw pixel values instead of original
 image, assuming that server will not change image size or format.
@@ -43,41 +43,30 @@ LibreOffice learns what to do with them.
 
 ### Extension entry points
 
-* ./description.xml
-  This file (and those that it references) describes the extension, its license
-  in a human readable form.
-* ./META-INF/manifest.xml
-  This file explains the contents of the extension for LibreOffice to inject.
+* ./description.xml - This file (and those that it references) describes the
+extension, its license in a human readable form.
+* ./META-INF/manifest.xml - This file explains the contents of the extension
+for LibreOffice to inject.
 
 ### Files referenced from description.xml
 
-* ./description/license.txt
-  License shown to the user on installation.
-* ./description/description_en.txt
-  Human readable description to show e.g. in the extension manager.
-* ./description/extensionicon.png
-  Icon to show e.g. in the extension manager
-* ./description/icon.xcf
-  Icon source image from GIMP
+* ./description/license.txt - License shown to the user on installation.
+* ./description/description\_en.txt - Human readable description to show e.g.
+in the extension manager.
+* ./description/extensionicon.png - Icon to show e.g. in the extension manager
+* ./description/icon.xcf - Icon source image from GIMP
 
 ### Files referenced from manifest.xml
 
-* ./uno\_image.py
-  Python script that implements a service called
-  org.libreoffice.imageexample.ImageExample
-* ./Addons.xcu
-  Describes how this extension wants to modify the toolbar. It adds an icon
-  "Grayscale images" that triggers the
-  org.libreoffice.imageexample.ImageExample service with "show_warning"
-  argument.
-* ./images/
-  Images in this folder used by Addons.xcu to add icon to new button.
+* ./uno\_image.py - Python script that implements a service called
+org.libreoffice.imageexample.ImageExample
+* ./Addons.xcu - Describes how this extension wants to modify the toolbar. It
+adds an icon "Grayscale images" that triggers the
+org.libreoffice.imageexample.ImageExample service with "export\_images" argument.
+* ./images/ - Images in this folder used by Addons.xcu to add icon to new button.
 
 ### Files not referenced anywhere and ignored at runtime
 
-* ./build
-  A simple python script that packs the extension from the unpacked source.
-* ./extensionname.txt
-  A file hinting ./build how to name the produced .oxt file.
-* ./README.md
-  This file.
+* ./build - A simple python script that packs the extension from the unpacked source.
+* ./extensionname.txt - A file hinting ./build how to name the produced .oxt file.
+* ./README.md - This file.
