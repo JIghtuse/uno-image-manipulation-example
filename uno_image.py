@@ -10,6 +10,11 @@ class ImageExample(unohelper.Base, XJobExecutor):
 
     def __init__(self, context):
         self.context = context
+        self.desktop = self.createUnoService("com.sun.star.frame.Desktop")
+        self.graphics = self.createUnoService("com.sun.star.graphic.GraphicProvider")
+
+    def createUnoService(self, name):
+        return self.context.ServiceManager.createInstanceWithContext(name, self.context)
 
 g_ImplementationHelper = unohelper.ImplementationHelper()
 g_ImplementationHelper.addImplementation(
