@@ -12,8 +12,22 @@ LibreOffice learns what to do with them.
 
 ## Extension entry points
 
+* ./description.xml
+  This file (and those that it references) describes the extension, its license
+  in a human readable form.
 * ./META-INF/manifest.xml
   This file explains the contents of the extension for LibreOffice to inject.
+
+## Files referenced from description.xml
+
+* ./description/license.txt
+  License shown to the user on installation.
+* ./description/description_en.txt
+  Human readable description to show e.g. in the extension manager.
+* ./description/extensionicon.png
+  Icon to show e.g. in the extension manager
+* ./description/icon.xcf
+  Icon source image from GIMP
 
 ## Files referenced from manifest.xml
 

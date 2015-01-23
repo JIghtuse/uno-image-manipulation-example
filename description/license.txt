@@ -1,0 +1,18 @@
+UNO + Python image manipulation extension
+
+This extension adds to Libreoffice Writer a button to grayscale all images in
+document. It can be useful to preview document before printing it on printer
+without colored inks. Images processed by remote server.
+
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this
+file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Developed by Boris Egorov.
+
+Files description/extensionicon.png and description/icon.xcf is licensed as CC0.
+
+This extension is self-contained in that it contains the full source to build
+itself. To do so, unpack the oxt-extension with any program able to read the
+zip format. Running the script './build' in the unpacked source tree, will then
+recreate the extension (and possible modifications).

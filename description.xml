@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description xmlns="http://openoffice.org/extensions/description/2006" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <version value="2015.01.11"/>
+    <identifier value="org.libreoffice.example.imagemanipulation"/>
+    <icon>
+        <default xlink:href="description/extensionicon.png" />
+    </icon>
+    <display-name>
+        <name>UNO + Python image manipulation for LibreOffice</name>
+    </display-name>
+    <extension-description>
+        <src xlink:href="description/description_en.txt"/>
+    </extension-description>
+    <dependencies xmlns:lo="http://libreoffice.org/extensions/description/2011">
+        <lo:LibreOffice-minimal-version name="LibreOffice 4.2" value="4.2"/>
+    </dependencies>
+    <publisher>
+        <name xlink:href="http://begorov.me">Boris Egorov</name>
+    </publisher>
+    <registration>
+        <simple-license accept-by="admin" >
+            <license-text xlink:href="description/license.txt" />
+        </simple-license>
+    </registration>
+</description>
