@@ -1,2 +1,3 @@
-# uno-image-manipulation-example
-Example extension for LibreOffice. Shows how to use UNO with Python to manipulate images.
+# UNO image manipulation example
+This repo contains example extension for LibreOffice. It shows how to use UNO
+and Python to extract and manipulate images in LibreOffice Writer document.
