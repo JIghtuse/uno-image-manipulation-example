@@ -70,3 +70,5 @@ org.libreoffice.imageexample.ImageExample service with "export\_images" argument
 * ./build - A simple python script that packs the extension from the unpacked source.
 * ./extensionname.txt - A file hinting ./build how to name the produced .oxt file.
 * ./README.md - This file.
+* ./test_server.py - Example server for extension. It fills all received pixels with
+\x00 value and sends them back.
