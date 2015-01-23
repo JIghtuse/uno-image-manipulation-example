@@ -34,6 +34,13 @@ LibreOffice learns what to do with them.
 * ./uno\_image.py
   Python script that implements a service called
   org.libreoffice.imageexample.ImageExample
+* ./Addons.xcu
+  Describes how this extension wants to modify the toolbar. It adds an icon
+  "Grayscale images" that triggers the
+  org.libreoffice.imageexample.ImageExample service with "show_warning"
+  argument.
+* ./images/
+  Images in this folder used by Addons.xcu to add icon to new button.
 
 ## Files not referenced anywhere and ignored at runtime
 

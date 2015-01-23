@@ -10,7 +10,7 @@ file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 Developed by Boris Egorov.
 
-Files description/extensionicon.png and description/icon.xcf is licensed as CC0.
+Image files in description/ and images/ folders is licensed as CC0.
 
 This extension is self-contained in that it contains the full source to build
 itself. To do so, unpack the oxt-extension with any program able to read the
